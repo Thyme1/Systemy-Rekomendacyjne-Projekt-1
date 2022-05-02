@@ -131,7 +131,7 @@ class DataPreprocessingToolkit(object):
         f = df.date_from.dt.dayofweek
         t = df.date_to.dt.dayofweek
         dt = (df.date_to- df.date_from).dt.days
-        contains_weekend = ( ((f >= 4) & (f != 6)) | ( t>=4) & (f != 6) | ((t < f) & (f != 6)) | (dt >= 6) )
+        contains_weekend = ( ((f >= 4) & (f != 6)) | (t >=5) | ((t < f) & (f != 6)) | (dt >= 6) )
         
         df['weekend_stay'] = contains_weekend
         df_new1 = df.copy()                                                
