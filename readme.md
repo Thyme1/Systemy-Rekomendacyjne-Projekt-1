@@ -22,18 +22,44 @@ conda install --file requirements.txt
 
 The goals of the project are:
 
-1. prepare dataset of hotel recommendations for content based recommender,
-2. select best features for the model,
-3. find the best model for recommending hotels for users,
+1. pre-process data of hotel recommendations for content based recommender,
+2. select best user and item features,
+3. tune the model,
 4. compare the results against Amazon recommender.
 
 Data preparation is done in <code>project_1_data_preparation.ipynb</code>
 
-Defining features, implementing recommender, tunning, and testing the recommender are included in <code>project_1_recommender_and_evaluation.ipynb</code>
+
+
+Defining features, implementing recommender, tunning, and testing the recommender are included in <code>project_1_recommender_and_evaluation_approach1.ipynb</code>
+
+and
+
+<code>project_1_recommender_and_evaluation_approach2.ipynb</code>
+
+The difference between approaches is generation of negative interactions in fit function.
 
 ### Used algorithms
-The best recommender was XGBoostCBUIRecommender.
+
+Approach 1
+- XGBoost
+- Linear Regression
+- SVR
+- Random Forest
+
+Approach 2
+- Linear Regression
+- Random Forest
+
+
 
 
 ### Achieved results
-Final HR@10 result is 0.061779
+Approach 1
+
+![Alt text](data/results.png "a title")
+
+Approach 2
+
+![Alt text](data/results2.png "a title")
+
